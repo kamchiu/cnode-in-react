@@ -7,8 +7,7 @@ const fetchTopic = () => (dispatch) => {
     url: 'https://cnodejs.org/api/v1/topics',
     params: {
       tab: 'all',
-      limit: 20,
-      page: 2
+      limit: 20
     }
   })
     .then(res => dispatch({ type: 'FETCH_TOPIC_FULFILLED', payload: res.data.data }))
